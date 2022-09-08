@@ -22,6 +22,7 @@ import { UsersModule } from './users/users.module';
 				logging: true,
 			}),
 		}),
+		
     UsersModule,
   ],
   providers: [],
