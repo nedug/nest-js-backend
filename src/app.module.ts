@@ -9,9 +9,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 			imports: [ ConfigModule ],
 			inject: [ ConfigService ],
 			useFactory: async (config: ConfigService) => ({
-				// type: config.get<'aurora-data-api'>('TYPEORM_CONNECTION'),
         		type: 'postgres',
-				// host: config.get<string>('TYPEORM_HOST'),
+				host: config.get<string>('TYPEORM_HOST'),
 				username: config.get<string>('TYPEORM_USERNAME'),
 				password: config.get<string>('TYPEORM_PASSWORD'),
 				database: config.get<string>('TYPEORM_DATABASE'),
