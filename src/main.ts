@@ -8,7 +8,7 @@ async function bootstrap() {
   const config = app.get(ConfigService);
   const PORT = config.get('API_PORT');
 
-  await app.listen(PORT || 3000, () => {
+  await app.listen(PORT || 3001, () => {
     console.log(`App starten on porn: ${PORT}`);
   });
 }
